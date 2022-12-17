@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IKEA MV0</title>
+     <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+{% for elem in camion -%}
+    <ul class="camiones"><h1>{{elem}}</h1>
+    {% for item in camion[elem] -%}
+            <li>Menaje: {{camion[elem][item]["Menaje"]}}</li>
+            <li>Textil11: {{camion[elem][item]["Textil 11"]}}</li>
+            <li>Textil12: {{camion[elem][item]["Textil 12"]}}</li>
+            <li>Orden: {{camion[elem][item]["Orden"]}}</li>
+            <li>Banos: {{camion[elem][item]["Baños"]}}</li>
+            <li>Iluminacion: {{camion[elem][item]["Iluminacion"]}}</li>
+            <li>Ninos: {{camion[elem][item]["Niños"]}}</li>
+            <li>Actividades: {{camion[elem][item]["Actividades"]}}</li>
+    {% endfor -%}
+    </ul>
+{% endfor -%}
+</body>
+</html>
